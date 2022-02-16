@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+
+X = int(input())
+sizes = Counter(map(int,raw_input().split()))
+N = int(input())
+earnings = 0
+
+for i in xrange(N):
+    size,x = map(int,raw_input().split())
+    if sizes[size]>0:
+        sizes[size]-=1
+        earnings += x
+        
+print earnings
