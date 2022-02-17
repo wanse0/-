@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+
+S,k = raw_input().split()
+k = int(k)
+
+print '\n'.join(sorted(''.join(p) for p in permutations(S,k)))
