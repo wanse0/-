@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+items = int(raw_input())
+items_price = OrderedDict()
+for _ in range(items):
+    desc = raw_input().split()
+    if not items_price.get(" ".join(desc[0:-1]),None):
+        items_price[" ".join(desc[0:-1])] =0
+    items_price[" ".join(desc[0:-1])] += int(desc[-1])
+
+for i,j in items_price.items():
+    print i,j
