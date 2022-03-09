@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(raw_input())
+s = set(raw_input().split())
+m = int(raw_input())
+for i in range (0, m):
+    lis = raw_input().split()
+    # s,type(s)
+    #print lis
+    if lis[0] == 'remove':
+        s.remove(lis[1])
+    if lis[0] == 'discard':
+        s.discard(lis[1])
+    if lis[0] == 'pop':
+        s = set(sorted(s, reverse = True))
+        s.pop()
+        s = set(sorted(s, reverse = True))
+
+if  len(s) != 0:
+    print   sum(map(int, s))
+else:
+    print "0"
