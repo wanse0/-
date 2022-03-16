@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import division
+import itertools
+n = int(raw_input())
+alphas = raw_input().split()
+k = int(raw_input())
+checkSymbol = 'a'
+
+combinations = list(itertools.combinations(alphas,k))
+filtered = [cb for cb in combinations if checkSymbol in cb]
+print len(filtered)/ len(combinations)
