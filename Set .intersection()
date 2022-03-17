@@ -1,0 +1,7 @@
+encount = int(raw_input())
+enst = set(map(int,raw_input().split(' ')))
+frcount = int(raw_input())
+frst = set(map(int,raw_input().split(' ')))
+
+studs = enst & frst
+print len(studs)
