@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for case in range(int(raw_input())):
+    element_count1, set1 = int(raw_input()), set(raw_input().split())
+    element_count2, set2 = int(raw_input()), set(raw_input().split())
+    print(len(set1.difference(set2))==0)
