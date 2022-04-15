@@ -1,0 +1,6 @@
+x,k=map(int,raw_input().strip().split(" "))
+p=eval(raw_input())
+if(p==k):
+    print True
+else:
+    print False
